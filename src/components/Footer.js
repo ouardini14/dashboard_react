@@ -3,7 +3,7 @@ import React from 'react'
 export default function Footer() {
   const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
   return (
-    <div className='pt-10 bg-[#FAFAFA]'>
+    <div className='w-screen pt-10 bg-[#FAFAFA] '>
       <div className='grid grid-cols-4 px-12 '>
       <div>
         <h3 className='text-secondary text-3xl'>
@@ -83,13 +83,19 @@ export default function Footer() {
           {letters.map((el,i)=><a href='/' className='pl-2 font-bold'>{el}</a>)}</sapn>
       </div>
 
-      <div className='bg-white py-8 px-12 '>
-        <div className='flex items-center justify-between'>
-            <div>
-              <h1 className='text-primary font-bold text-5xl'>Logo</h1>
+      <div className='bg-white py-5 px-12 '>
+        <div className='flex  justify-between  items-center'>
+          <div className='flex-1'>
+            <h1 className='text-primary font-bold text-5xl'>Logo</h1><br />
             <p className="text-sm text-gray-400">Consultez notre aide en ligne ou contactez-nous</p>
-            </div>
+          </div>
+          <div className='flex  gap-8'>
+            <a href="/"><img src="/img/facebook.png" alt="" className='h-8 w-8' /></a>
+            <a href="/"><img src="/img/linkedin.png" alt="" className='h-8 w-8' /></a>
+            <a href="/"><img src="/img/instagram.png" alt="" className='h-8 w-8' /></a>
+            <a href="/"><img src="/img/twitter.png" alt="" className='h-8 w-8' /></a>
 
+          </div>
 
             <div>
 

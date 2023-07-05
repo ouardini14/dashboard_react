@@ -1,6 +1,6 @@
 import { AdjustmentsHorizontalIcon, ArchiveBoxArrowDownIcon, ChevronDownIcon, DocumentArrowDownIcon } from '@heroicons/react/24/outline'
 import React from 'react'
-import {docs} from '../media/data/data'
+import { docs } from '../data/data'
 export default function DocsSection() {
     console.log(docs)
   return (
