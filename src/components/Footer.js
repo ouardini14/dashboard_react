@@ -79,8 +79,8 @@ export default function Footer() {
         <h3 className='text-secondary text-xl sm:text-3xl'>
           Recherche de Lorem Ipsum
         </h3><br />
-        <sapn className='text-xs sm:text-base text-gray-500 space-x-1 flex flex-wrap'> Lorem Ipsum  : 
-          {letters.map((el,i)=><a href='/' key={i} className='pl-2 font-bold'>{el}</a>)}</sapn>
+        <span className='text-xs sm:text-base text-gray-500 space-x-1 flex flex-wrap'> Lorem Ipsum  : 
+          {letters.map((el,i)=><a href='/' key={i} className='pl-2 font-bold'>{el}</a>)}</span>
       </div> 
 
       <div className='bg-white py-5 px-5  sm:px-12'>

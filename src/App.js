@@ -13,7 +13,7 @@ function App() {
       <div className="min-h-[100vh]  font-avenir bg-[#FAFAFA]">
         <Routes>
            <Route path="/" element={<Home />} />
-          {/*<Route path="/Agenda" element={<Agenda />} /> */}
+          <Route path="/Agenda" element={<Agenda />} /> 
 
 
         </Routes></div>

@@ -50,7 +50,7 @@ export default function Header() {
 
           </div>
 
-          <div className='flex justify-between items-center group hover:bg-white/50 cursor-pointer transition-all ease-in-out duration-300 gap-1 sm:gap-2 px-4 py-2 rounded-lg'>
+          <div className='flex justify-between items-center group hover:bg-white/50 cursor-pointer transition-all ease-in-out duration-300 gap-1 sm:gap-2 py-2 rounded-lg'>
             <div className='flex justify-between items-center gap-1'>
               <UserCircleIcon className='h-6 w-6 text-white  ' />
               <span className='hidden sm:inline'>Full name Lorem</span>
