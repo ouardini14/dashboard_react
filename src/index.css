@@ -7,7 +7,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 5px;
 }
 
 /* Track */
@@ -19,6 +19,7 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
+    width: 5px;
   background: linear-gradient(90deg, rgba(201, 137, 221, 0.9) -8.54%, rgba(133, 202, 250, 0.9) 108.12%);
   border-radius: 10px;
 }

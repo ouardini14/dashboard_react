@@ -2,10 +2,9 @@ import { AdjustmentsHorizontalIcon, ArchiveBoxArrowDownIcon, ChevronDownIcon, Do
 import React from 'react'
 import { docs } from '../data/data'
 export default function DocsSection() {
-    console.log(docs)
   return (
-    <div>
-          <div className='grid grid-cols-6 bg-gray-100 border-gray-200 border-2 '> 
+    <div >
+          <div className=' md:grid md:grid-cols-6 flex flex-col bg-gray-100 border-gray-200 border-2 '> 
               <div className='relative    space-x-3  flex items-center justify-center  px-4  border-r-2 border-gray-200 py-5'>
                   <AdjustmentsHorizontalIcon className="h-5 w-5 text-gray-400 " />
                   <input
@@ -37,30 +36,31 @@ export default function DocsSection() {
                   className="outline-none  bg-transparent text-black placeholder-gray-400  px-4  border-r-2 border-gray-200 py-5"
               />
         </div>
-          <table className="table-fixed w-screen mt-4 border-separate border-spacing-y-8  text-center">
-              <thead className='py-5'>
-                  <tr className='border-b-2 border-gray-400 text-lg  '>
-                      <th>Documents</th>
-                      <th>Numero</th>
-                      <th>Type</th>
-                      <th>Date d'ajout</th>
-                      <th>Ajouté par</th>
-                      <th>Fichier</th>
+          <div className='overflow-x-auto'>
+              <table className=" relative w-full  mt-4  text-center   ">
+              <thead className=' border-b-2 border-gray-400'>
+                  <tr className=' text-lg  '>
+                      <th className=' py-5'>Documents</th>
+                      <th className=' py-5'>Numero</th>
+                      <th className=' py-5'>Type</th>
+                      <th className=' py-5'>Date d'ajout</th>
+                      <th className=' py-5'>Ajouté par</th>
+                      <th className=' py-5'>Fichier</th>
 
                   </tr>
               </thead>
-              <tbody>
+              <tbody className='divide-y  divide-gray-950 '>
                   {docs.map((el,i)=>
                       <tr className='text-sm hover:bg-gray-200/20 ' key={i}>
-                          <td className='flex border-b-2 border-b-gray-400 py-5 text-left pl-8'>
+                          <td className='whitespace-nowrap px-8 flex  py-5 text-left pl-8'>
                               <input type="checkbox" />
                               <span className='pl-2'>{el.name}</span>  
                             </td>
-                          <td className='border-b-2 border-b-gray-400 py-5 text-lg' >{el.num}</td>
-                          <td className='border-b-2 border-b-gray-400 py-5' >{el.type}</td>
-                          <td className='border-b-2 border-b-gray-400 py-5 text-lg'>{el.date}</td>
-                          <td className='border-b-2 border-b-gray-400 py-5'>{el.by}</td>
-                          <td  className='border-b-2 border-b-gray-400 py-5 flex items-center justify-evenly '>
+                          <td className='whitespace-nowrap px-8 py-5 text-lg' >{el.num}</td>
+                          <td className='whitespace-nowrap px-8 py-5' >{el.type}</td>
+                          <td className='whitespace-nowrap px-8 py-5 text-lg'>{el.date}</td>
+                          <td className='whitespace-nowrap px-8 py-5'>{el.by}</td>
+                          <td  className='whitespace-nowrap px-8 py-5 flex items-center justify-evenly gap-3 '>
                             <DocumentArrowDownIcon className='w-7 h-7 text-primary cursor-pointer'/>
                               <ArchiveBoxArrowDownIcon className='w-7 h-7 text-neutral cursor-pointer' />
                           </td>
@@ -71,6 +71,9 @@ export default function DocsSection() {
                  
               </tbody>
           </table>
+
+        </div>
+
 
 
     </div>
