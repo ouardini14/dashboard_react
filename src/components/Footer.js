@@ -6,7 +6,7 @@ export default function Footer() {
     <div className='w-screen pt-10 bg-[#FAFAFA] '>
       <div className='md:grid md:grid-cols-4 flex flex-row flex-wrap gap-16   sm:gap-2 px-5 sm:px-5 '>
       <div>
-        <h3 className='text-secondary text-xl sm:text-xl sm:text-3xl'>
+          <h3 className='text-secondary text-xl sm:text-3xl'>
           A props de nom
         </h3><br/>
           <a href="/" className='text-xs sm:text-base text-gray-500'> Lorem Ipsum</a><br/>
