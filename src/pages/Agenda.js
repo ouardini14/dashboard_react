@@ -8,8 +8,8 @@ export default function Agenda() {
     return (
         <div className=' space-y-9 '>
 
-            <div className=' md:grid md:grid-cols-3  min-h-[90vh]'>
-                <div className=' relative px-3 sm:px-7 py-10 border-r-2 border-x-gray-300'>
+            <div className='flex flex-col  2xl:flex-row  min-h-[90vh]'>
+                <div className=' relative px-3 sm:px-7 py-10 2xl:border-r-2 border-x-gray-300 2xl:max-w-[380px]'>
                     <div className='flex justify-between  pb-8'>
                         <h1 className='text-xl sm:text-3xl font-semibold'>Mes Lorem Ipsum</h1>
                         <button className='flex items-center gap-1 text-sm text-gray-400 border border-gray-400 p-2 rounded-md'>
@@ -17,7 +17,7 @@ export default function Agenda() {
                             Filter
                         </button>
                     </div>
-                    <div className=' flex md:flex-col flex-row flex-nowrap  gap-5 md:max-h-[85vh] overflow-x-auto overflow-y-hidden md:overflow-y-auto py-5 md:px-3 '>
+                    <div className=' flex 2xl:flex-col flex-row flex-nowrap  gap-5 2xl:max-h-[60vh] overflow-x-auto overflow-y-hidden 2xl:overflow-y-auto py-5 2xl:px-3 '>
                         {
                             reservations.map((el, i) => (
                                 <Reservation reservation={el} key={i} />
@@ -39,8 +39,8 @@ export default function Agenda() {
 
                 </div>
                 <div
-                 className=' col-start-2 col-end-4 py-10 px-7'  >
-                    <AgendaSection /> 
+                 className=' flex-1 py-10 px-5 xl:px-7 self-center justify-self-center'  >
+                    <AgendaSection  reservations={reservations}/> 
                 </div>
 
             </div>

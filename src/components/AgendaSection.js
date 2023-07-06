@@ -1,6 +1,8 @@
 import React from 'react'
+import AgendaItem from '../components/AgendaItem'
+import { ChevronLeftIcon,ChevronRightIcon } from '@heroicons/react/24/outline'
 
-export default function AgendaSection() {
+export default function AgendaSection({reservations}) {
   const time = ["08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]
   const daysOfWeekArray = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
 
@@ -18,36 +20,46 @@ export default function AgendaSection() {
         </div>
       </div>
 
-      <div className='  hidden md:flex'>
-        <div className='flex flex-col  w-14 '>
-          <div className='h-[100px]'>
+<div className='relative'>
+        <div className=' 2xl:py-0 py-5 2xl:absolute origin-center top-9  flex items-center justify-center gap-5 2xl:justify-between 2xl:w-[1070px] text-black'>
+          <button className='p-2 bg-white rounded-full shadow-xl '><ChevronLeftIcon className='h-5 w-5' /></button>
+          <button className='p-2 bg-white rounded-full shadow-xl'><ChevronRightIcon className='h-5 w-5' /></button>
+        </div>
+        <div className='  flex max-w-[1000px]'>
 
-          </div>
-              {
-            time.map((el,i)=>(
-              <div className='h-16'>
-                {el}
-              </div>
-            ))
-              } 
+          <div className='flex flex-col  px-2 text-xs sm:text-base md:text-lg '>
+            <div className='h-14 sm:h-16 md:h-[100px]'>
+
             </div>
-          <div className='bg-white  '>
-          <div className='grid grid-cols-7 border-2  divide-y divide-x divide-gray-200 '>
-            {daysOfWeekArray.map((el,i)=>(
-              <div className={`py-8 text-center w-32 h-28 ${i == 0 && 'font-semibold drop-shadow-md'}`}>
-                {el} <br/>
-                {17+i}/04
+            {
+              time.map((el, i) => (
+                <div key={i} className='h-12 sm:h-16'>
+                  {el}
                 </div>
-            ))}
-            {Array.apply(null, Array(105)).map((el) => (
-              <div className='   w-32 h-16 flex  items-center justify-center'> </div>
-            ))}
+              ))
+            }
           </div>
+          <div className='bg-white  '>
+            <div className='grid grid-cols-7 border-2  divide-y divide-x divide-gray-200 '>
+              {daysOfWeekArray.map((el, i) => (
+                <div key={i}  className={`text-xs sm:text-base md:text-lg py-8 flex items-center justify-center text-center w-auto h-14 sm:h-20 md:h-28 ${i == 0 && 'font-semibold drop-shadow-md'}`}>
+                  {el} <br />
+                  {17 + i}/04
+                </div>
+              ))}
+              {Array.apply(null, Array(105)).map((el, i) => (
+                <div key={i} className=' 2xl:min-w-[140px] w-auto xl:min-w-[180px]  h-12 sm:h-16 '>
+                  {i == 29 && <AgendaItem reservation={reservations[0]} />}
+                </div>
+              ))}
+            </div>
             <div></div>
           </div>
 
 
-      </div>
+        </div>
+</div>
+
     </div>
   )
 }

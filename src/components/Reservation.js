@@ -3,7 +3,7 @@ import { ClockIcon } from '@heroicons/react/24/outline'
 
 export default function Reservation({reservation}) {
   return (
-    <div className={`min-w-[280px] md:min-w-full rounded-lg  border border-orange-400 hover:shadow-lg cursor-pointer md:hover:scale-105 transition-all ease-in-out duration-300`}>
+    <div className={`min-w-[280px] max-w-[550px]  rounded-lg  border border-orange-400 hover:shadow-lg cursor-pointer md:hover:scale-105 transition-all ease-in-out duration-300`}>
       <div className='flex items-center justify-between text-white bg-orange-400 px-3 py-3'>
         <div className=' flex gap-5 text-sm md:text-base'>
           <h3>{reservation?.title}</h3>
